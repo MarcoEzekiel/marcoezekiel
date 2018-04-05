@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '32Whcm86MFhcjmyGSAnbMWzDPCxpwVXOPRwST52QcyuVYHcWbta4xRe5trytO1YUtsLvm6N5rw';
+$settings['hash_salt'] = 'VynOYMDZRBq8wqfoSN04mhW4hToXFIyxMXAGpsFmV9mj_jPET_Kwmr5J4mZZPUqBA4Q3pMeI0Q';
 
 /**
  * Deployment identifier.
@@ -722,11 +722,10 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * For example:
  * @code
- */
-  $settings['trusted_host_patterns'] = array(
-    '^www\.marcoezekiel\.com$',
-  );
- /** @endcode
+ * $settings['trusted_host_patterns'] = array(
+ *   '^www\.example\.com$',
+ * );
+ * @endcode
  * will allow the site to only run from www.example.com.
  *
  * If you are running multisite, or if you are running your site from
@@ -747,6 +746,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 
+  $settings['trusted_host_patterns'] = array(
+    '^marcoezekiel\.local\.com$',
+  );
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -792,10 +794,10 @@ $databases['default']['default'] = array (
   'username' => 'marco',
   'password' => 'scratch1ng_H3nry',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => '127.0.0.1',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_K8ZA9279MDARod82gDzz5Za7zWBJuVOpWx9teOBrlZym2RxOzZkC8hq47QXjcXzxPEDS-kx4RA/sync';
+$config_directories['sync'] = 'sites/default/files/config_2X0FJsYzNBlcsm3V2rGSo_uoejcOGf66fNifsxby_xagFhF-VNk7WbBIugUN_F7l8Eu8sp_QDg/sync';
